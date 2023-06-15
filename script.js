@@ -1,15 +1,11 @@
 const btn = Array.from(document.querySelectorAll('button'));
 
-const rock = document.getElementById('rock');
-
-const paper = document.getElementById('paper');
-
-const scissors = document.getElementById('scissors');
+let output = document.querySelector(".output2")
 
 const arrSign = ["Rock" , "Paper" , "Scissors"]
 
 function randomize() {
-    return Math.floor((Math.random() * 3) + 1);
+    return Math.floor((Math.random() * 3));
 }
 
 
@@ -23,10 +19,14 @@ btn.map( button => {
 
                 if (valor === "Rock") {
                     console.log('equal');
+
+                    output.innerText = "equality";
                 } else if (valor === "Paper") {
                     console.log('you win');
+                    output.innerText = "you win";
                 } else {
                     console.log('you lose');
+                    output.innerText = "you lose";
                 }
 
                 break;
@@ -38,10 +38,13 @@ btn.map( button => {
 
                 if (valor2 === "Paper") {
                     console.log('equal');
+                    output.innerText = "equality";
                 } else if (valor2 === "Scissors") {
                     console.log('you win');
+                    output.innerText = "you win";
                 } else {
                     console.log('you lose');
+                    output.innerText = "you lose";
                 }
                 break;
 
@@ -52,10 +55,13 @@ btn.map( button => {
 
                 if (valor3 === "Scissors") {
                     console.log('equal');
+                    output.innerText = "equality";
                 } else if (valor3 === "Rock") {
                     console.log('you win');
+                    output.innerText = "you win";
                 } else {
                     console.log('you lose');
+                    output.innerText = "you lose";
                 }
                 break;
         
